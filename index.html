@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="kr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="index.css" type="text/css">
 </head>
+
 <body>
+    <div class="animate_div"></div>
     <div class="language_select">
         <div class="circle"></div>
         <a class="language_kr" href="#">
-            <span class="korean">Korean</span>
+            <span class="korean">한국어</span>
             <span class="hover_korean">안녕하세요!</span>
         </a>
         <a class="language_eg" href="#">
@@ -18,7 +21,7 @@
             <span class="hover_english">Hello!</span>
         </a>
         <a class="language_jp" href="#">
-            <span class="japanese">Japanese</span>
+            <span class="japanese">日本語</span>
             <span class="hover_japanese">こんにちは!</span>
         </a>
     </div>
@@ -38,10 +41,15 @@
     <div class="page1" id="page1">
         <div class="page1_main_text">
             <div class="page1_main_text_container">
-                <div><p>안녕하세요</p></div>
-                <div><p>웹디자인</p></div>
-                <div><p>프론트엔드</p></div>
-                <div><p>포트폴리오</p></div>
+                <div class="main_text_1">
+                    <p>웹디자인</p>
+                </div>
+                <div class="main_text_2">
+                    <p>프론트엔드</p>
+                </div>
+                <div class="main_text_3">
+                    <p>포트폴리오</p>
+                </div>
             </div>
         </div>
         <div class="page1_animation_container">
@@ -59,24 +67,72 @@
     <div class="page2" id="page2">
         <div class="behind-image-area">
             <img src="#" class="object-image">
-            <div class="introduction-container">
-                <div class="container-1">
-                    <h4>PROFILE</h4>
-                    <p>윤관호</p>
-                    <p>YUN GWAN HO</p>
-                    <p>1998.11.02</p>
-                </div>    
-                <div class="container-2">
-                    
+        </div>
+        <div class="introduction-container">
+            <div class="profile_container">
+                <div class="profile_name_container">
+                    <div class="profile_photo"></div>
+                    <div>
+                        <div class="profile_info_container">
+                            <div class="profile_name">
+                                <p>윤관호</p>
+                            </div>
+                            <div class="profile_info">
+                                <p>1998. 11. 02</p>
+                                <p>YUN GWAN HO</p>
+                                <p>+82 10-8214-5664</p>
+                                <p>tifm1065@gmail.com</p>
+                            </div>
+                            <div class="language_container">
+                                <h4>언어</h4>
+                                <p>한국어 - 모국어</p>
+                                <p>일본어 - 일상 회화 가능</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="academic_container">
+                    <h4>학력</h4>
+                    <p>계명대학교 학사 - 공예디자인학부 금속공예 전공</p>
+                </div>
+                <div class="activity_container">
+                    <h4>활동</h4>
+                    <p>계명대학교 공예디자인학부 졸업준비위원회 임원</p>
+                </div>
+                <div class="exhibition_container">
+                    <h4>전시</h4>
+                    <p>계명대학교 공예디자인학부 졸업전시회 출품</p>
+                    <p>계명대학교 공예디자인 서클전 출품</p>
+                    <p>국제게임전시회 G-STAR 2021 출품 - 프로젝트 아트팀장</p>
+                </div>
+                <div class="certificate_containder">
+                    <h4>자격</h4>
+                    <p>新 JLPT N2급 - 일본국제교류회</p>
+                    <p>新 JLPT N3급 - 일본국제교류회</p>
+                    <p>1종대형운전면허 - 경찰청</p>
+                </div>
+                <div class="skill_container">
+                    <h4>주요 기술</h4>
+                    <p>HTML5 - 홈페이지 제작</p>
+                    <p>css3 - 스타일, 애니메이션 구현</p>
+                    <p>Javascript - 애니메이션 구현 등</p>
+                    <p>React Js - 컴포넌트 활용 홈페이지 제작</p>
+                    <h4>그 외</h4>
+                    <p>Figma - 웹디자인, UI디자인</p>
+                    <p>Photoshop - 편집, 디자인, 디지털 드로잉</p>
+                    <p>InDesign - 졸업작품 책자 제작</p>
+                    <p>Rhino 3D - 제품 모델링</p>
+                    <p>3Ds Max - 캐릭터&배경 모델링, 리깅, 바이패드 애니메이션</p>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="page3" id="page3">
-        <div>
+        <div class="page3" id="page3">
+            <div>
 
+            </div>
         </div>
-    </div>
 </body>
 <script src="index.js"></script>
+
 </html>

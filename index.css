@@ -1,17 +1,41 @@
+@font-face {
+    font-family: 'fonts';
+    src: url('fonts/OpenSans-Regular.ttf')format('truetype');
+    font-style: normal;
+    unicode-range: U+0041-005A, U+0061-007A;
+}
+
+@font-face {
+    font-family: 'fonts';
+    src: url('fonts/NotoSansKR-Regular.ttf')format('truetype');
+    font-style: normal;
+    unicode-range: U+AC00-D7A3;
+}
+
+@font-face {
+    font-family: 'fonts';
+    src: url('fonts/NotoSansJP-Regular.ttf')format('truetype');
+    unicode-range: U+3041-3096, U+309D, U+309E, U+30A1-30FA, U+30FC,U+4E00-9FEA;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Noto Sans KR", sans-serif;
+}
+
+body{
+    font-family: 'fonts';
 }
 
 .language_select {
+    padding: 10px 0;
     position: fixed;
     display: flex;
     justify-content: end;
     gap: 20px;
-    width: 90vw;
-    background-color: transparent;
+    width: 99vw;
+    background-color: #171717;
     z-index: 2;
 }
 
@@ -27,6 +51,14 @@
 
 .language_select a span {
     margin: 0 20px;
+}
+
+.circle {
+    margin: 3px 10px 0 0;
+    width: 20px;
+    height: 20px;
+    border: 4px solid #fff;
+    border-radius: 25px;
 }
 
 .language_kr:hover .korean,
@@ -53,7 +85,7 @@
 
 .language_jp:hover .japanese,
 .language_jp:hover .hover_japanese {
-    transform: translateX(-120px);
+    transform: translateX(-105px);
     transition: ease-in 0.4s;
 }
 
@@ -67,9 +99,24 @@
     position: fixed;
     background-color: transparent;
     color: #fff;
-    z-index: 2;
-    top: 40vh;
-    right: 10vh;
+    top: 34vh;
+    right: 2%;
+    z-index: 99;
+    animation: opacity 6s;
+}
+
+@keyframes opacity {
+
+    0%,
+    75% {
+        transform: translateX(-40px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 .page_navigate button {
@@ -80,19 +127,7 @@
     color: #fff;
     font-weight: bold;
     font-size: 1.5em;
-    text-transform: uppercase;
-}
-
-.page_navigate button:after {
-    content: '';
-    border-bottom: 3px solid #fff;
-    transform: scaleX(0);
-    transition: transform 2s ease-in-out;
-}
-
-.page_navigate button:after:hover {
-    transform-origin: 100% 50%;
-    transform: scaleX(1);
+    cursor: pointer;
 }
 
 .page1 {
@@ -111,50 +146,111 @@
     top: 8vh;
     font-size: 1.1em;
 }
-.page1_main_text{
+
+.page1_main_text {
     position: absolute;
     top: 35vh;
     width: 99vw;
     overflow: hidden;
 }
-.page1_main_text_container{
-    display: flex;
-    width: 297vw;
+
+.page1_main_text_container {
+    width: 99vw;
+    height: 20vh;
+    cursor: default;
 }
+
 .page1_main_text p {
     text-align: center;
     font-size: 8em;
     font-weight: 400;
-    width: 99vw; 
     color: #fff;
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out;
 }
-.animate-end{
-    animation : endAnimation 1s forwards
-}
-@keyframes endAnimation{
-    0% {transform: translateY(0);}
-    50%{transform: translateY(0);}
-    75% {transform: translateY(-20);}
-    100% {transform: translateY(-40px);}
-}
-.page1_animation_container{
+
+.main_text_1 p,
+.main_text_2 p,
+.main_text_3 p {
     position: absolute;
-    top: 50vh;
+    width: 99vw;
+    z-index: 4;
+}
+
+.main_text_1 p.show,
+.main_text_2 p.show,
+.main_text_3 p.show {
+    opacity: 1;
+}
+
+.animate_div {
+    background-color: #000;
+    display: block;
+    position: absolute;
+    width: 99vw;
+    height: 100vh;
+    z-index: 3;
+    animation: blockDisplay 5s forwards;
+}
+
+@keyframes blockDisplay {
+
+    0%,
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+.animate-end {
+    animation: endAnimation 2s forwards
+}
+
+@keyframes endAnimation {
+
+    0%,
+    25% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-45px);
+    }
+}
+
+.page1_animation_container {
+    position: absolute;
+    top: 42vh;
     width: 99vw;
 }
-.page1_animation_container p{
-    animation : addAnimation 5s forwards;
+
+.page1_animation_container p {
+    animation: addAnimation 5s forwards;
     font-size: 2em;
     font-weight: 400;
     text-align: center;
     color: #fff;
     opacity: 0;
 }
-@keyframes addAnimation{
-    0% {opacity: 0;}
-    75% {opacity: 0;;}
-    100% {opacity: 1;}
+
+@keyframes addAnimation {
+
+    0%,
+    75% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(60px);
+        opacity: 1;
+    }
 }
+
 .cover {
     position: absolute;
     width: 99vw;
@@ -217,4 +313,26 @@
 .page2 {
     width: 100%;
     height: 100vh;
+    background-color: #424242;
+}
+.profile_name_container{
+    position: relative;
+    display: flex;
+}
+.profile_photo{
+    width: 150px;
+    height: 200px;  
+    background-color: #d9d9d9;
+}
+.profile_name1 p{
+    font-size: 2em;
+}
+.profile_name2{
+    font-size: 1em;
+}
+.profile_name3{ 
+    font-size: 1em;
+}
+.profile_info{
+    
 }
