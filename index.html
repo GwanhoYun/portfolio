@@ -12,7 +12,7 @@
     <div class="animate_div"></div>
     <div class="language_select">
         <div class="circle"></div>
-        <a class="language_kr" href="#">
+        <a class="language_kr" href="index.html">
             <span class="korean">한국어</span>
             <span class="hover_korean">안녕하세요!</span>
         </a>
@@ -21,14 +21,9 @@
             <span class="hover_english">Hello!</span>
         </a>
         <a class="language_jp" href="#">
-            <span class="japanese">日本語</span>
+            <span class="japanese">にほんご</span>
             <span class="hover_japanese">こんにちは!</span>
         </a>
-    </div>
-    <div class="page_navigate">
-        <button data-target="page1">Hello!</button>
-        <button data-target="page2">Profile</button>
-        <button data-target="page3">Portfolio</button>
     </div>
     <div class="top_text">
         <p>PORTFOLIO</p>
@@ -52,9 +47,13 @@
                 </div>
             </div>
         </div>
-        <div class="page1_animation_container">
-            <p>개발하는 디자이너 윤관호입니다.</p>
+        <div onclick="infoBtn()" class="page1_animation_container">
+            <p class="info_btn">디자이너 윤관호입니다.</p>
+            <div class="hover_event">
+                <p>▲ 누르면 프로필이 나와요 ▲</p>
+            </div>
         </div>
+
         <div>
             <div class="cover">
                 <p class="first-parallal"></p>
@@ -63,13 +62,8 @@
                 <p class="second-parallal"></p>
             </div>
         </div>
-    </div>
-    <div class="page2" id="page2">
-        <div class="behind-image-area">
-            <img src="#" class="object-image">
-        </div>
         <div class="introduction-container">
-            <div class="profile_container">
+            <div class="aboutMe">
                 <div class="profile_name_container">
                     <div class="profile_photo"></div>
                     <div>
@@ -80,58 +74,339 @@
                             <div class="profile_info">
                                 <p>1998. 11. 02</p>
                                 <p>YUN GWAN HO</p>
-                                <p>+82 10-0000-0000</p>
+                                <p>+82 10-8214-5664</p>
                                 <p>tifm1065@gmail.com</p>
                             </div>
-                            <div class="language_container">
+                            <div class="profile_language">
                                 <h4>언어</h4>
                                 <p>한국어 - 모국어</p>
-                                <p>일본어 - 일상 회화 가능</p>
+                                <p>일본어 - 일상회화 가능</p>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="skill">
+                    <div class="main_skill">
+                        <h4>▶ 주요 기술</h4>
+                        <table>
+                            <tr>
+                                <td>
+                                    <h5>HTML5</h5>
+                                </td>
+                                <td>
+                                    <p>홈페이지 폼 작성</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h5>CSS3</h5>
+                                </td>
+                                <td>
+                                    <p>홈페이지 스타일, 애니메이션 구현</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h5>Javascript</h5>
+                                </td>
+                                <td>
+                                    <p>애니메이션, 스크립트 구현, 컴포넌트 캡슐화</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h5>React js</h5>
+                                </td>
+                                <td>
+                                    <p>컴포넌트 캡슐화, 스크립트, 홈페이지 제작</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="sub_skill">
+                        <h4>▶ 그 외</h4>
+                        <table>
+                            <tr>
+                                <td>
+                                    <h5>Figma</h5>
+                                </td>
+                                <td>
+                                    <p>웹디자인, UI디자인</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h5>Photoshop</h5>
+                                </td>
+                                <td>
+                                    <p>편집, 디자인, 디지털 드로잉</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h5>Rhino 8</h5>
+                                </td>
+                                <td>
+                                    <p>주얼리, 제품 모델링</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h5>3Ds Max</h5>
+                                </td>
+                                <td>
+                                    <p>캐릭터&배경 모델링, 리깅, Bone 애니메이션</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="page2_R">
+                <div class="academic">
+                    <h4>▶ 학력</h4>
+                    <table>
+                        <tr>
+                            <td>
+                                <h5>계명대학교 졸업</h5>
+                            </td>
+                            <td>
+                                <p>공예디자인학부 금속공예 전공</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>2024.03</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="activity">
+                    <h4>▶ 활동</h4>
+                    <table>
+                        <tr>
+                            <td>
+                                <h5>계명대학교 공예디자인학부 졸업준비위원회</h5>
+                            </td>
+                            <td>
+                                <p>임원</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>2023.09 ~ 2023.12</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="">
+                    <h4>▶ 수상</h4>
+                    <table>
+                        <tr>
+                            <td>
+                                <h5>울산광역시 북구 쓰레기 무단 투기 예방 포스터 공모전</h5>
+                            </td>
+                            <td>
+                                <p>최우수상</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>2020.10</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="exhibition">
+                    <h4>▶ 전시</h4>
+                    <table>
+                        <tr>
+                            <td>
+                                <h5>계명대학교 공예디자인 졸업전시</h5>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>2023.12</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h5>계명대학교 공예디자인 서클전</h5>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>2022.12</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h5>국제게임전시회 G-STAR 2021</h5>
+                            </td>
+                            <td>
+                                <p>프로젝트"TENNIBLE" 아트팀장</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>2021.11 </p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="certificate">
+                    <h4>▶ 자격</h4>
+                    <table>
+                        <tr>
+                            <td>
+                                <h5>日本語能力試験(JLPT) N2</h5>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>2019. 08</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h5>1종대형운전면허</h5>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>2018.04</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div onclick="infoBtn()" class="info_off"><button>접기</button></div>
+            </div>
 
+        </div>
+    </div>
+    <div class="page2" id="page2">
+        <div class="background_icon">
+            <a>
+                <img src="img/computer_icon.png">
+                <p>내 컴퓨터</p>
+            </a>
+            <a>
+                <img id="content_2_open" style="cursor: pointer;" src="img/folder_2_icon.png">
+                <p>Portfolio_page</p>
+            </a>
+        </div>
+        <div class="content_container">
+            <div class="content_1">
+                <div class="icon_container">
+                    <div class="content_titel">
+                        <h2>Portfolio</h2>
+                    </div>
+                    <div class="icon_head">
+                        <div class="icon_box" onclick="minimization()">
+                            <div class="icon_line"></div>
+                        </div>
+                        <div class="icon_box" onclick="fullScreen()">
+                            <div class="icon_window"></div>
+                        </div>
+                        <div class="icon_box">
+                            <div class="icon_x_1"></div>
+                            <div class="icon_x_2"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="academic_container">
-                    <h4>학력</h4>
-                    <p>계명대학교 학사 - 공예디자인학부 금속공예 전공</p>
+                <div class="content_decoration">
+                    <div>
+                        <span>◀</span>
+                        <span> | </span>
+                        <span>▶</span>
+                        <p>https://gwanhoyun.github.io/GMUH/</p>
+                    </div>
                 </div>
-                <div class="activity_container">
-                    <h4>활동</h4>
-                    <p>계명대학교 공예디자인학부 졸업준비위원회 임원</p>
+                <div class="portfolio_view">
+                    <div class="content_1_main">
+                        <img src="img/GMUH.PNG" alt="GMUH_page">
+                    </div>
+                    <div style="position: relative;">
+                        <div class="text_contain">
+                            <p class="text_contain_title">글로벌메디컬대학병원 (프로젝트)</p>
+                            <ul>
+                                <li>
+                                    <p>구성</p>
+                                    <span>메인페이지, 로그인, 아이디 찾기, 회원가입 ,제증명</span>
+                                </li>
+                                <li>
+                                    <p>참여</p>
+                                    <p>4인으로 구성된 팀 프로젝트 페이지 입니다.</p>
+                                    <p>UX, UI, 웹디자인, 프론트엔드 전부를 담당했습니다.</p>
+                                </li>
+                                <li classs="link_container">
+                                    <button class="link_button">페이지 보기</button>
+                                    <button class="link_button">Git HUB</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="exhibition_container">
-                    <h4>전시</h4>
-                    <p>계명대학교 공예디자인학부 졸업전시회 출품</p>
-                    <p>계명대학교 공예디자인 서클전 출품</p>
-                    <p>국제게임전시회 G-STAR 2021 출품 - 프로젝트 아트팀장</p>
+            </div>
+            <div class="content_2">
+                <div class="icon_container">
+                    <div class="content_titel">
+                        <h2>file</h2>
+                    </div>
+                    <div class="icon_head">
+                        <div class="icon_box" onclick="minimization_2()">
+                            <div class="icon_line"></div>
+                        </div>
+                        <div class="icon_box" onclick="fullScreen_2()">
+                            <div class="icon_window"></div>
+                        </div>
+                        <div class="icon_box" id="content_2_close" onclick="off_file()">
+                            <div class="icon_x_1"></div>
+                            <div class="icon_x_2"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="certificate_containder">
-                    <h4>자격</h4>
-                    <p>新 JLPT N2급 - 일본국제교류회</p>
-                    <p>新 JLPT N3급 - 일본국제교류회</p>
-                    <p>1종대형운전면허 - 경찰청</p>
+                <div class="content_decoration">
+                    <div>
+                        <span>◀</span>
+                        <span> | </span>
+                        <span>▶</span>
+                        <p>바탕화면 / file</p>
+                    </div>
                 </div>
-                <div class="skill_container">
-                    <h4>주요 기술</h4>
-                    <p>HTML5 - 홈페이지 제작</p>
-                    <p>css3 - 스타일, 애니메이션 구현</p>
-                    <p>Javascript - 애니메이션 구현 등</p>
-                    <p>React Js - 컴포넌트 활용 홈페이지 제작</p>
-                    <h4>그 외</h4>
-                    <p>Figma - 웹디자인, UI디자인</p>
-                    <p>Photoshop - 편집, 디자인, 디지털 드로잉</p>
-                    <p>InDesign - 졸업작품 책자 제작</p>
-                    <p>Rhino 3D - 제품 모델링</p>
-                    <p>3Ds Max - 캐릭터&배경 모델링, 리깅, 바이패드 애니메이션</p>
+                <div class="action_clickIcon_2">
+                    <div class="content_2_main">
+                        <a>
+                            <img src="img/window_icon.png" alt="window_icon">
+                            <p>G_B_Univ_hospital.page</p>
+                        </a>
+                        <a>
+                            <img src="img/window_icon.png" alt="window_icon">
+                            <p>Jet_Tour.page</p>
+                        </a>
+                        <a>
+                            <img src="img/window_icon.png" alt="window_icon">
+                            <p>Portfolio.page</p>
+                        </a>
+                        <a>
+                            <img src="img/window_icon.png" alt="window_icon">
+                            <p>Luminas.page</p>
+                        </a>
+                        <a>
+                            <img src="img/window_icon.png" alt="window_icon">
+                            <p>Jet_Airline.page</p>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="page3" id="page3">
-            <div>
 
-            </div>
-        </div>
+    </div>
+    </div>
+    <div class="page3" id="page3">
+
+    </div>
 </body>
 <script src="index.js"></script>
 
