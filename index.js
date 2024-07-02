@@ -302,3 +302,27 @@ function onOffTrigger() {
         document.getElementById("content_2_open").onclick = null;
     }
 }
+
+let onOffFlag_2 = 1;
+const onOffView_2 = document.querySelector(".content_1");
+function on_file2() {
+    onOffFlag_2 = 1;
+    onOffTrigger_2();
+}
+function off_file2() {
+    onOffFlag_2 = 0;
+    onOffTrigger_2();
+}
+function onOffTrigger_2() {
+    if (onOffFlag_2 === 0) {
+        onOffView_2.style.display = "none";
+        minimization()
+        document.getElementById("content_1_close").onclick = null;
+        document.getElementById("content_1_open").onclick = on_file2;
+    } else {
+        onOffView_2.style.display = "block";
+        fullScreen()
+        document.getElementById("content_1_close").onclick = off_file2;
+        document.getElementById("content_1_open").onclick = null;
+    }
+}
