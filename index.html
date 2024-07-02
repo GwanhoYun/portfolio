@@ -288,12 +288,16 @@
     <div class="page2" id="page2">
         <div class="background_icon">
             <a>
-                <img src="img/computer_icon.png">
-                <p>내 컴퓨터</p>
+                <div class="icon_div_1">
+                    <img src="img/computer_icon.png">
+                    <p>내 컴퓨터</p>
+                </div>
             </a>
             <a>
-                <img id="content_2_open" style="cursor: pointer;" src="img/folder_2_icon.png">
-                <p>Portfolio_page</p>
+                <div class="icon_div_2">
+                    <img id="content_2_open" style="cursor: pointer;" src="img/folder_2_icon.png">
+                    <p>Portfolio_page</p>
+                </div>
             </a>
         </div>
         <div class="content_container">
@@ -309,7 +313,7 @@
                         <div class="icon_box" onclick="fullScreen()">
                             <div class="icon_window"></div>
                         </div>
-                        <div class="icon_box">
+                        <div class="icon_box" id="content_1_close" onclick="off_file2()">
                             <div class="icon_x_1"></div>
                             <div class="icon_x_2"></div>
                         </div>
@@ -377,7 +381,7 @@
                 </div>
                 <div class="action_clickIcon_2">
                     <div class="content_2_main">
-                        <a>
+                        <a id="content_1_open">
                             <img src="img/window_icon.png" alt="window_icon">
                             <p>G_B_Univ_hospital.page</p>
                         </a>
