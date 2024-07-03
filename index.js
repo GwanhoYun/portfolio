@@ -53,7 +53,7 @@ function handleWheel(event) {
 }
 
 function page2ScreenEvent() {
-    fullScreen(); // 전체 화면으로 전환하는 함수 호출
+    // fullScreen(); // 전체 화면으로 전환하는 함수 호출
     fullScreen_2(); // 페이지 2의 최소화 관련 함수 호출
 }
 
@@ -281,6 +281,7 @@ function fullScreen_2() {
 
 let onOffFlag = 1;
 const onOffView = document.querySelector(".content_2");
+
 function on_file() {
     onOffFlag = 1;
     onOffTrigger();
@@ -303,7 +304,8 @@ function onOffTrigger() {
     }
 }
 
-let onOffFlag_2 = 1;
+let onOffFlag_2 = 0;
+let fullScreenControl = 0;
 const onOffView_2 = document.querySelector(".content_1");
 function on_file2() {
     onOffFlag_2 = 1;
@@ -316,13 +318,89 @@ function off_file2() {
 function onOffTrigger_2() {
     if (onOffFlag_2 === 0) {
         onOffView_2.style.display = "none";
-        minimization()
-        document.getElementById("content_1_close").onclick = null;
-        document.getElementById("content_1_open").onclick = on_file2;
     } else {
-        onOffView_2.style.display = "block";
-        fullScreen()
-        document.getElementById("content_1_close").onclick = off_file2;
-        document.getElementById("content_1_open").onclick = null;
+        if (fullScreenControl === 0) {
+            onOffView_2.style.display = "block";
+            fullScreen();
+            fullScreenControl = 1;
+        } else {
+            onOffView_2.style.display = "block";
+        }
     }
+} onOffTrigger_2()
+
+const portfolioClickEvent = [
+    document.getElementById('show_portfolio_1'),
+    document.getElementById('show_portfolio_2'),
+    document.getElementById('show_portfolio_3'),
+    document.getElementById('show_portfolio_4')
+];
+
+function clickEventControl() {
+
+    portfolioClickEvent.forEach((portfolio, index) => {
+        portfolio.onclick = function () {
+            showPortfolio(index); // 클릭된 포트폴리오 버튼을 보여줌
+            enableClickEvents(index); // 다른 포트폴리오 버튼의 클릭 이벤트 활성화
+            portfolioLink(index);
+        };
+    });
 }
+
+function showPortfolio(activeIndex) {
+    const viewPortfolio = [
+        document.querySelectorAll('.portfolio_page1'),
+        document.querySelectorAll('.portfolio_page2'),
+        document.querySelectorAll('.portfolio_page3'),
+        document.querySelectorAll('.portfolio_page4')
+    ];
+
+    viewPortfolio.forEach((page, pageIndex) => {
+        page.forEach(pageItem => {
+            pageItem.style.display = 'none';
+        });
+        if (pageIndex === activeIndex) {
+            page.forEach(pageItem => {
+                pageItem.style.display = 'block';
+            });
+        }
+    });
+}
+
+function portfolioLink(linkActiveIndex) {
+    const portfoliolinks = [
+        document.querySelectorAll('.page1_link'),
+        document.querySelectorAll('.page2_link'),
+        document.querySelectorAll('.page3_link'),
+        document.querySelectorAll('.page4_link')
+    ];
+
+    portfoliolinks.forEach((links, linkIndex) => {
+        links.forEach(link => {
+            link.style.display = 'none';
+        });
+        if (linkIndex === linkActiveIndex) {
+            links.forEach(link => {
+                link.style.display = 'flex';
+                link.style.gap = '20px';
+                link.style.justifyContent = 'center';
+            });
+        }
+    });
+}
+
+
+function enableClickEvents(activeIndex) {
+    portfolioClickEvent.forEach((portfolio, index) => {
+        if (index !== activeIndex) {
+            portfolio.onclick = function () {
+                showPortfolio(index); // 다른 포트폴리오 버튼 클릭 시 해당 페이지를 보여줌
+                enableClickEvents(index); // 다른 포트폴리오 버튼의 클릭 이벤트 활성화
+                portfolioLink(index);
+            };
+        }
+    });
+}
+
+// 초기 상태 설정
+clickEventControl();
