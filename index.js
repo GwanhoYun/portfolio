@@ -333,7 +333,8 @@ const portfolioClickEvent = [
     document.getElementById('show_portfolio_1'),
     document.getElementById('show_portfolio_2'),
     document.getElementById('show_portfolio_3'),
-    document.getElementById('show_portfolio_4')
+    document.getElementById('show_portfolio_4'),
+    document.getElementById('show_portfolio_5')
 ];
 
 function clickEventControl() {
@@ -352,7 +353,8 @@ function showPortfolio(activeIndex) {
         document.querySelectorAll('.portfolio_page1'),
         document.querySelectorAll('.portfolio_page2'),
         document.querySelectorAll('.portfolio_page3'),
-        document.querySelectorAll('.portfolio_page4')
+        document.querySelectorAll('.portfolio_page4'),
+        document.querySelectorAll('.portfolio_page5')
     ];
 
     viewPortfolio.forEach((page, pageIndex) => {
@@ -372,7 +374,8 @@ function portfolioLink(linkActiveIndex) {
         document.querySelectorAll('.page1_link'),
         document.querySelectorAll('.page2_link'),
         document.querySelectorAll('.page3_link'),
-        document.querySelectorAll('.page4_link')
+        document.querySelectorAll('.page4_link'),
+        document.querySelectorAll('.page5_link')
     ];
 
     portfoliolinks.forEach((links, linkIndex) => {
